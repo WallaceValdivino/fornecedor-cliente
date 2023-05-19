@@ -7,7 +7,7 @@ import { Client } from './clients';
   providedIn: 'root'
 })
 export class ClientService {
-   url = "http://localhost:3000/clients";
+   url = "http://localhost:4000/clients";
   constructor(private http: HttpClient) {}
   getClients(): Observable<Client[]>{
   return this.http.get<[Client]>(this.url);

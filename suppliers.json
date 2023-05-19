@@ -1,0 +1,25 @@
+{
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Harry",
+      "email": "harry@gmail.com",
+      "location": "Harry House",
+      "cpf": 7567653453
+    },
+    {
+      "id": 2,
+      "name": "Brasil",
+      "email": "brasil@gmail.com",
+      "location": "Brasil House",
+      "cpf": 423423423423
+    },
+    {
+      "id": 3,
+      "name": "Tony",
+      "email": "tony@gmail.com",
+      "location": "Tony House",
+      "cpf": 4234324234
+    }
+  ]
+}

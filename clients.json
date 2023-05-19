@@ -1,0 +1,25 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Johson",
+      "email": "johson@gmail.com",
+      "location": "Johson House",
+      "cpf": 23432464770
+    },
+    {
+      "id": 2,
+      "name": "Brad",
+      "email": "brad@gmail.com",
+      "location": "Brad House",
+      "cpf": 53443245
+    },
+    {
+      "id": 3,
+      "name": "Shrek",
+      "email": "shrek@gmail.com",
+      "location": "Shrek House",
+      "cpf": 34534564353
+    }
+  ]
+}
