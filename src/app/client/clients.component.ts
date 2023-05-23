@@ -12,7 +12,7 @@ export class ClientsComponent implements OnInit {
   Clients: Client[] = [];
   isEditing: boolean = false;
   formGroupClient: FormGroup;
-
+  myDrop: any;
 
   constructor(
     private clientService: ClientService,

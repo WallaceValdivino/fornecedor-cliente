@@ -7,7 +7,7 @@
         <form [formGroup]="formGroupSupplier">
 
           <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">Nome</label>
             <input type="text" formControlName="name" class="form-control" id="name" placeholder="Digite seu nome">
           </div>
 
@@ -19,24 +19,26 @@
           <div class="mb-3">
             <label for="location" class="form-label">Localização</label>
             <select formControlName="location" class="form-select" id="location" aria-label="Default select example">
-              <option value="São Paulo">Sul</option>
-              <option value="Minas Gerais">Sudeste</option>
+              <option value="Sul">Sul</option>
+              <option value="Sudeste">Sudeste</option>
             </select>
           </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="radio" formControlName="sanitary" value="Sim" id="flexRadioDefault3" name="sanitaryGroup" />
-            <label class="form-check-label text-white" for="flexRadioDefault3">
-              Passou no exame sanitário.
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" formControlName="sanitary" value="Não" id="flexRadioDefault4" name="sanitaryGroup" />
-            <label class="form-check-label text-white" for="flexRadioDefault4">
-              Não passou no exame sanitário.
-            </label>
-          </div>
 
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="examination" value="Sim" id="flexRadioDefault1"  />
+            <label class="form-check-label text-white" for="flexRadioDefault1">
+              Passou no exame sanitário
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="examination" value="Não" id="flexRadioDefault2"
+              checked />
+            <label class="form-check-label text-white" for="flexRadioDefault2">
+              Não passou no exame sanitário
+            </label>
+          </div>
 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" formControlName="commentary" id="flexCheckDefault" />
@@ -59,7 +61,7 @@
           <th scope="col">#</th>
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
-          <th scope="col">Endereço</th>
+          <th scope="col">Região</th>
           <th scope="col">Exame Sanitário</th>
           <th scope="col">Bons feedbacks</th>
           <th scope="col">Opções</th>
@@ -72,7 +74,7 @@
           <td>{{supplier.email}}</td>
           <td>{{supplier.location}}</td>
           <td>
-            {{ supplier.examination   | yesNo }}
+            {{ supplier.examination}}
           </td>
           <td>{{supplier.commentary  | yesNo }}</td>
           <td>
