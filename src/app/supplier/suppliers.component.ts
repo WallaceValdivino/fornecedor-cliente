@@ -28,6 +28,8 @@ isEditing : boolean = false;
       email: [''],
       location: [''],
       cpf: [''],
+      examination: [''],
+      commentary: ['']
     });
   }
 

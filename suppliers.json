@@ -2,24 +2,30 @@
   "suppliers": [
     {
       "id": 1,
-      "name": "Harry",
-      "email": "harry@gmail.com",
-      "location": "Harry House",
-      "cpf": 7567653453
+      "name": "",
+      "email": "",
+      "location": "",
+      "cpf": "",
+      "examination": "",
+      "commentary": true
     },
     {
       "id": 2,
-      "name": "Brasil",
-      "email": "brasil@gmail.com",
-      "location": "Brasil House",
-      "cpf": 423423423423
+      "name": null,
+      "email": null,
+      "location": null,
+      "cpf": null,
+      "examination": null,
+      "commentary": null
     },
     {
       "id": 3,
-      "name": "Tony",
-      "email": "tony@gmail.com",
-      "location": "Tony House",
-      "cpf": 4234324234
+      "name": null,
+      "email": null,
+      "location": null,
+      "cpf": null,
+      "examination": null,
+      "commentary": true
     }
   ]
 }

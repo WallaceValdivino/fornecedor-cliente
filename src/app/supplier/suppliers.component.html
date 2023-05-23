@@ -17,13 +17,32 @@
           </div>
 
           <div class="mb-3">
-            <label for="location" class="form-label">Endereço</label>
-            <input type="text" formControlName="location" class="form-control" id="location" placeholder="Digite seu endereço">
+            <label for="location" class="form-label">Localização</label>
+            <select formControlName="location" class="form-select" id="location" aria-label="Default select example">
+              <option value="São Paulo">Sul</option>
+              <option value="Minas Gerais">Sudeste</option>
+            </select>
           </div>
 
-          <div class="mb-3">
-            <label for="cpf" class="form-label">CPF</label>
-            <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="sanitary" value="Sim" id="flexRadioDefault3" name="sanitaryGroup" />
+            <label class="form-check-label text-white" for="flexRadioDefault3">
+              Passou no exame sanitário.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="sanitary" value="Não" id="flexRadioDefault4" name="sanitaryGroup" />
+            <label class="form-check-label text-white" for="flexRadioDefault4">
+              Não passou no exame sanitário.
+            </label>
+          </div>
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" formControlName="commentary" id="flexCheckDefault" />
+            <label class="form-check-label text-white" for="flexCheckDefault">
+              Há bons feedbacks
+            </label>
           </div>
           <div>
             <button class="btn btn-info m-3" (click)="save()">Salvar</button>
@@ -41,6 +60,8 @@
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
           <th scope="col">Endereço</th>
+          <th scope="col">Exame Sanitário</th>
+          <th scope="col">Bons feedbacks</th>
           <th scope="col">Opções</th>
         </tr>
       </thead>
@@ -50,6 +71,10 @@
           <td>{{supplier.name}}</td>
           <td>{{supplier.email}}</td>
           <td>{{supplier.location}}</td>
+          <td>
+            {{ supplier.examination   | yesNo }}
+          </td>
+          <td>{{supplier.commentary  | yesNo }}</td>
           <td>
             <button class="btn btn-warning me-2" (click)="edit(supplier)">Editar</button>
             <button class="btn btn-danger"  (click)="delete(supplier)">Deletar</button>

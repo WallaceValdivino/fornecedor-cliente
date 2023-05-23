@@ -2,8 +2,10 @@
   "name": "fornecedor-cliente",
   "version": "0.0.0",
   "scripts": {
+    "start-server1": "json-server --watch clients.json --port 3001",
+    "start-server2": "json-server --watch suppliers.json --port 3002",
+    "start": "npm-run-all -p start-server1 start-server2",
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -21,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.1.1",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
