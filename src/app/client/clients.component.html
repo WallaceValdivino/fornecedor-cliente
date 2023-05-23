@@ -16,15 +16,68 @@
             <input type="email" formControlName="email" class="form-control" id="email" placeholder="Digite seu email">
           </div>
 
-          <div class="mb-3">
-            <label for="location" class="form-label">Endereço</label>
-            <input type="text" formControlName="location" class="form-control" id="location" placeholder="Digite seu endereço">
-          </div>
+
+         <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+  <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">
+    Localização
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+    <button ngbDropdownItem [value]="'São Paulo'" (click)="formGroupClient.patchValue({ location: 'São Paulo' })">São Paulo</button>
+    <button ngbDropdownItem [value]="'Minas Gerais'" (click)="formGroupClient.patchValue({ location: 'Minas Gerais' })">Minas Gerais</button>
+  </div>
+</div>
+
+
 
           <div class="mb-3">
             <label for="cpf" class="form-label">CPF</label>
             <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF">
           </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="crime" value="Sim" id="flexRadioDefault1">
+            <label class="form-check-label text-white" for="flexRadioDefault1">
+              Possui antecedentes criminais
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="crime" value="Não" id="flexRadioDefault2" checked>
+            <label class="form-check-label text-white" for="flexRadioDefault2">
+              Não possui antecedentes criminais
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" formControlName="popularity" id="flexCheckDefault">
+            <label class="form-check-label text-white" for="flexCheckDefault">
+              Ouço falar frequentemente deste estabelecimento
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" formControlName="frequency" id="flexCheckChecked">
+            <label class="form-check-label text-white" for="flexCheckChecked">
+              Costumo vir aqui frequentemente
+            </label>
+          </div>
+
+
+
+
+
+<div>
+  <span *ngIf="formGroupClient.controls['popularity'].value === true; else notChecked">Sim</span>
+  <ng-template #notChecked>Não</ng-template>
+</div>
+<div>
+  <span *ngIf="formGroupClient.controls['frequency'].value === true; else notChecked2">Sim</span>
+  <ng-template #notChecked2>Não</ng-template>
+</div>
+
+
+
+
+
+
+
           <div>
             <button class="btn btn-info m-3" (click)="save()">Salvar</button>
             <button class="btn btn-info" (click)="clean()">Limpar</button>
@@ -42,6 +95,9 @@
           <th scope="col">Email</th>
           <th scope="col">Endereço</th>
           <th scope="col">CPF</th>
+          <th scope="col">Antecedentes Criminais</th>
+          <th scope="col">Frequência</th>
+          <th scope="col">Popularidade</th>
           <th scope="col">Opções</th>
         </tr>
       </thead>
@@ -52,6 +108,11 @@
           <td>{{client.email}}</td>
           <td>{{client.location}}</td>
           <td>{{client.cpf}}</td>
+          <td>{{client.crime}}</td>
+          <td>
+            {{client.frequency | yesNo}}
+          </td>
+          <td>{{client.popularity | yesNo}}</td>
           <td>
             <button class="btn btn-warning me-2" (click)="edit(client)">Editar</button>
             <button class="btn btn-danger"  (click)="delete(client)">Deletar</button>

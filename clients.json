@@ -2,24 +2,33 @@
   "clients": [
     {
       "id": 1,
-      "name": "Johson",
-      "email": "johson@gmail.com",
-      "location": "Johson House",
-      "cpf": 23432464770
+      "name": "opa",
+      "email": "opa@gmail",
+      "location": "São Paulo",
+      "cpf": 4234234234,
+      "crime": "Sim",
+      "popularity": true,
+      "frequency": true
     },
     {
       "id": 2,
-      "name": "Brad",
-      "email": "brad@gmail.com",
-      "location": "Brad House",
-      "cpf": 53443245
+      "name": null,
+      "email": null,
+      "location": null,
+      "cpf": null,
+      "crime": null,
+      "popularity": true,
+      "frequency": true
     },
     {
       "id": 3,
-      "name": "Shrek",
-      "email": "shrek@gmail.com",
-      "location": "Shrek House",
-      "cpf": 34534564353
+      "name": null,
+      "email": null,
+      "location": null,
+      "cpf": null,
+      "crime": null,
+      "popularity": null,
+      "frequency": null
     }
   ]
 }

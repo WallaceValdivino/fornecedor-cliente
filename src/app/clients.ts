@@ -4,4 +4,7 @@ export interface Client{
   email: string;
   location: string;
   cpf: number;
+  crime: string;
+  frequency: string;
+  popularity: string;
 }

@@ -41,7 +41,6 @@
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
           <th scope="col">Endereço</th>
-          <th scope="col">CPF</th>
           <th scope="col">Opções</th>
         </tr>
       </thead>
@@ -51,7 +50,6 @@
           <td>{{supplier.name}}</td>
           <td>{{supplier.email}}</td>
           <td>{{supplier.location}}</td>
-          <td>{{supplier.cpf}}</td>
           <td>
             <button class="btn btn-warning me-2" (click)="edit(supplier)">Editar</button>
             <button class="btn btn-danger"  (click)="delete(supplier)">Deletar</button>

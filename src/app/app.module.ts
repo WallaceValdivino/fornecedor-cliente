@@ -9,6 +9,7 @@ import { SuppliersComponent } from './supplier/suppliers.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClientsComponent } from './client/clients.component';
 import { HttpClientModule } from '@angular/common/http';
+import { YesNoPipe } from './yes-no.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SuppliersComponent,
     ClientsComponent,
+    YesNoPipe,
   ],
   imports: [
     BrowserModule,

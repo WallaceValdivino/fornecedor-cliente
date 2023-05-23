@@ -3,5 +3,4 @@ export interface Supplier{
   name : string;
   email: string;
   location: string;
-  cpf: number;
 }
