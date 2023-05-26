@@ -1,8 +1,8 @@
 
 
-  <div class="bg-dark mt-5 container rounded">
+  <div class="bg-dark mt-5 container rounded  p-5">
     <div class="row">
-      <div class="display-6 text-center">
+      <div class="display-7 text-white text-center">
         <h3 class="text-white mt-4">Crud de Fornecedor</h3>
         <form [formGroup]="formGroupSupplier">
 
@@ -26,13 +26,13 @@
 
 
 
-          <div class="form-check">
+          <div class="form-check text-start">
             <input class="form-check-input" type="radio" formControlName="examination" value="Sim" id="flexRadioDefault1"  />
             <label class="form-check-label text-white" for="flexRadioDefault1">
               Passou no exame sanitário
             </label>
           </div>
-          <div class="form-check">
+          <div class="form-check text-start">
             <input class="form-check-input" type="radio" formControlName="examination" value="Não" id="flexRadioDefault2"
               checked />
             <label class="form-check-label text-white" for="flexRadioDefault2">
@@ -40,15 +40,15 @@
             </label>
           </div>
 
-          <div class="form-check">
+          <div class="form-check text-start">
             <input class="form-check-input" type="checkbox" formControlName="commentary" id="flexCheckDefault" />
             <label class="form-check-label text-white" for="flexCheckDefault">
               Há bons feedbacks
             </label>
           </div>
           <div>
-            <button class="btn btn-info m-3" (click)="save()">Salvar</button>
-            <button class="btn btn-info" (click)="clean()">Limpar</button>
+            <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
+            <button class="btn btn-primary" (click)="clean()">Limpar</button>
           </div>
 
         </form>

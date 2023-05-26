@@ -1,6 +1,6 @@
 <div class="bg-dark mt-5 container rounded text-white">
   <div class="row">
-    <div class="display-6 text-center">
+    <div class="display-7 text-center p-5">
       <h3 class="text-white mt-4">Crud de Cliente</h3>
       <form [formGroup]="formGroupClient">
         <div class="mb-3">
@@ -26,26 +26,26 @@
           <input type="number" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu CPF" />
         </div>
 
-        <div class="form-check">
+        <div class="form-check text-start">
           <input class="form-check-input" type="radio" formControlName="crime" value="Sim" id="flexRadioDefault1" />
           <label class="form-check-label text-white" for="flexRadioDefault1">
             Possui antecedentes criminais
           </label>
         </div>
-        <div class="form-check">
+        <div class="form-check text-start">
           <input class="form-check-input" type="radio" formControlName="crime" value="Não" id="flexRadioDefault2"
             checked />
           <label class="form-check-label text-white" for="flexRadioDefault2">
             Não possui antecedentes criminais
           </label>
         </div>
-        <div class="form-check">
+        <div class="form-check text-start">
           <input class="form-check-input" type="checkbox" formControlName="popularity" id="flexCheckDefault" />
           <label class="form-check-label text-white" for="flexCheckDefault">
             Ouço falar frequentemente deste estabelecimento
           </label>
         </div>
-        <div class="form-check">
+        <div class="form-check text-start">
           <input class="form-check-input" type="checkbox" formControlName="frequency" id="flexCheckChecked" />
           <label class="form-check-label text-white" for="flexCheckChecked">
             Costumo vir aqui frequentemente
@@ -53,8 +53,8 @@
         </div>
 
         <div>
-          <button class="btn btn-info m-3" (click)="save()">Salvar</button>
-          <button class="btn btn-info" (click)="clean()">Limpar</button>
+          <button class="btn btn-primary m-3" (click)="save()">Salvar</button>
+          <button class="btn btn-primary" (click)="clean()">Limpar</button>
         </div>
       </form>
     </div>
