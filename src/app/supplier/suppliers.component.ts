@@ -1,4 +1,4 @@
-import { SupplierService } from '../suppliers.service';
+import { ClientService } from '../clients.service';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -19,7 +19,7 @@ isEditing : boolean = false;
   formGroupSupplier : FormGroup;
 
   constructor(
-    private SupplierService: SupplierService,
+    private SupplierService: ClientService,
     private formsBuilder: FormBuilder
   ) {
     this.formGroupSupplier = formsBuilder.group({
@@ -45,7 +45,7 @@ isEditing : boolean = false;
 
   save() {
 if(this.isEditing){
-  this.SupplierService.edit(this.formGroupSupplier.value).subscribe({
+  this.SupplierService.edit_supplier(this.formGroupSupplier.value).subscribe({
 next: () =>{
   this.loadSuppliers();
   this.formGroupSupplier.reset();
@@ -56,7 +56,7 @@ next: () =>{
 else{
 
 
-    this.SupplierService.save(this.formGroupSupplier.value).subscribe(
+    this.SupplierService.save_supplier(this.formGroupSupplier.value).subscribe(
       {
         next: data =>{ this.Suppliers.push(data);
         this.formGroupSupplier.reset();
@@ -73,7 +73,7 @@ this.isEditing = true;
   }
 
   delete(Supplier : Supplier){
-    this.SupplierService.delete(Supplier).subscribe({
+    this.SupplierService.delete_supplier(Supplier).subscribe({
 
       next: () => this.loadSuppliers()
     })

@@ -42,7 +42,7 @@ export class ClientsComponent implements OnInit {
 
   save() {
     if (this.isEditing) {
-      this.clientService.edit(this.formGroupClient.value).subscribe({
+      this.clientService.edit_client(this.formGroupClient.value).subscribe({
         next: () => {
           this.loadClients();
           this.formGroupClient.reset();
@@ -50,7 +50,7 @@ export class ClientsComponent implements OnInit {
         },
       });
     } else {
-      this.clientService.save(this.formGroupClient.value).subscribe({
+      this.clientService.save_client(this.formGroupClient.value).subscribe({
         next: (data) => {
           this.Clients.push(data);
           this.formGroupClient.reset();
@@ -65,7 +65,7 @@ export class ClientsComponent implements OnInit {
   }
 
   delete(client: Client) {
-    this.clientService.delete(client).subscribe({
+    this.clientService.delete_client(client).subscribe({
       next: () => this.loadClients(),
     });
   }
